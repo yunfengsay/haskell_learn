@@ -85,10 +85,10 @@ myIntersperse _ [] = []
 myIntersperse _ [x] = x
 myIntersperse s (x:xs) = x ++ [s] ++ (myIntersperse s xs)
 
--- 8
+-- 8 获取二叉树高度
+myBinTreeHeight (Node parent _ _) = 1
+myBinTreeHeight (Node parent left right) = 1 + max (myBinTreeHeight left) (myBinTreeHeight right)
 -- 结束
-
-
 
 
 
