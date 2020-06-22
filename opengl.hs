@@ -1,5 +1,5 @@
 import Graphics.UI.GLUT
--- 1 
+-- master 
 main :: IO ()
 main = do
   (_progName, _args) <- getArgsAndInitialize
