@@ -1,0 +1,65 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 80c226cb54f6a4a73335bd42fe71b3c945b86d5bc0edfe7310a37e640757e029
+
+name:           newsclassify
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/newsclassify#readme>
+homepage:       https://github.com/githubuser/newsclassify#readme
+bug-reports:    https://github.com/githubuser/newsclassify/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/newsclassify
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_newsclassify
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , directory
+  default-language: Haskell2010
+
+executable newsclassify-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_newsclassify
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , directory
+    , newsclassify
+  default-language: Haskell2010
+
+test-suite newsclassify-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_newsclassify
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , directory
+    , newsclassify
+  default-language: Haskell2010
